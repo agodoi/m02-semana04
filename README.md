@@ -131,7 +131,7 @@ Caso apareça as velas, isto é, sails, sucesso na conexão!
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png">
    <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png)">
 </picture>
-
+ 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
 a) Crie um novo arquivo .ejs dentro do diretório **views**.
