@@ -27,6 +27,17 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
 
 1.4 Ainda no terminal, entre na pasta recém criada do projeto e digite **code .** para carregar o projeto inteiro no Visual Code.
 
+## Quais as pastas importantes?
+
+* api
+   * controllers
+
+* api
+   * models
+
+* views
+   * pastas 
+
 ## Etapa 2 - Adicionando uma página .ejs com código HTML:
 
 2.1 Crie um novo arquivo .ejs dentro do diretório `views`.
