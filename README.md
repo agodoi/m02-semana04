@@ -26,6 +26,12 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
 * É um ambiente assíncrono e baseado em eventos;
 	*  Execuções de forma não sequencial e não bloqueante, permitindo que o programa continue sua execução enquanto aguarda a conclusão de operações assíncronas, como operações de entrada/saída (I/O), chamadas de rede, ou outras operações que podem levar tempo para serem concluídas.
  	* É single-threaded, que significa que não precisa de mult-threaded para lidar com escalonamentos. Uma thread é uma programação concorrente e paralela, processamento de tarefas em segundo plano.
+* O Node.js possui um conceito chamado **Event Loop** que:
+	* Faz execuções de assíncronas;
+ 	* Operações de entradas e saídas de dados são assíncronos;
+  	* Gerencia fila de eventos de forma eficiente, executando-os ordenadamente;
+  	* É bão na tolerância de falhas, mantendo sua aplicação em execução.
+
 
 ### Arquitetura Node.js vs Arquitetura Tradicional
 
