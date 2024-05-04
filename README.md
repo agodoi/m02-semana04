@@ -9,11 +9,31 @@
 * Quarta: 8h30 às 10h
 * Sexta: 8h30 às 9h30
 
+# Resumo de Conceitos dos Autoestudos
+
+## Kahoot
+
 # Back-end I - Node.js, models e controllers
 
 Agora que temos o banco de dados pronto, bora contruir **aplicação servidor**, ou seja, o back-end. 
 
 Nesta instrução, praticaremos a construção de aplicações utilizando o Node.js, relacionando com o banco de dados, produzindo os primeiros pontos de contato com o mundo lá fora - os endpoints de uma WebAPI. Tudo isso sob a arquitetura MVC!
+
+
+## Conceitos de Node.js
+
+* Node.js é um ambiente de executar comandos **JavaScript** para fora do navegador;
+* É um ambiente assíncrono e baseado em eventos;
+	*  Execuções de forma não sequencial e não bloqueante, permitindo que o programa continue sua execução enquanto aguarda a conclusão de operações assíncronas, como operações de entrada/saída (I/O), chamadas de rede, ou outras operações que podem levar tempo para serem concluídas.
+ 	* É single-threaded, que significa que não precisa de mult-threaded para lidar com escalonamentos. Uma thread é uma programação concorrente e paralela, processamento de tarefas em segundo plano.
+
+### Arquitetura Node.js
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
+</picture>
+
 
 ## Etapa 1 - Criando um novo projeto Sails
 
