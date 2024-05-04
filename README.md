@@ -54,9 +54,9 @@ Conclusão:
 
 * Em 1º preciso do Node.js
 	* Em 2º vem o Sails
- 		* Controller
-   		* Model
-   		* View	 
+ 		* **api/controller** --> local onde você colocar as regras de negócio: buscar, criar, atualizar ou excluir dados.
+   		* **api/models** --> local das suas tabelas
+   		* **views** --> local do HTML + CSS + JS
 
 
 
@@ -65,15 +65,15 @@ Conclusão:
 
 ## Etapa 1 - Criando um novo projeto Sails
 
-1.1 Abra o terminal e navegue até o diretório onde deseja criar o projeto.
+a) Abra o terminal e navegue até o diretório onde deseja criar o projeto.
    
-1.2 Execute o comando **sails new nome-projeto**.
+b) Execute o comando **sails new nome-projeto**.
    - Este comando criará um novo projeto Sails com o nome especificado.
      
-1.3 Quando solicitado a escolher um modelo, selecione a opção **2 - Empty**.
+c) Quando solicitado a escolher um modelo, selecione a opção **2 - Empty**.
    - Isso criará um projeto vazio sem qualquer configuração pré-definida.
 
-1.4 Ainda no terminal, entre na pasta recém criada do projeto e digite **code .** para carregar o projeto inteiro no Visual Code.
+d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .** para carregar o projeto inteiro no Visual Code.
 
 ## Quais as pastas importantes?
 
@@ -93,25 +93,44 @@ Conclusão:
    * pastas que você irá criar
 
 * package.json (penúltimo arquivo)
+  
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
-2.1 Crie um novo arquivo .ejs dentro do diretório **views**.
+a) Crie um novo arquivo .ejs dentro do diretório **views**.
    - Você pode nomear o arquivo de acordo com a página que deseja criar, por exemplo, **teste.ejs**.
 
-2.2 Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da página.
+b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da página.
 
+```
+<form action="/salvarDado" method="post">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+  <button type="submit">Salvar</button>
+</form>
+
+```
+## Etapa 3 - Configure o package.json
+
+a) Busque pelo arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql). Esse site é a documentação.
+
+b) Mas para instalar a biblioteca do **PostgreSQL** no seu projeto, digite esse comando dentro da pasta do seu projeto usando o terminal ```npm i sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png)">
+</picture>
 
 ## Etapa 3 - Configure uma rota para esta página
 
-3.1 Abra o arquivo **config/routes.js**.
-3.2 Adicione uma nova rota para a página criada.
+a) Abra o arquivo **config/routes.js**.
+b) Adicione uma nova rota para a página criada.
    - Se você está apenas exibindo uma view, use o formato **'GET /teste': { view: 'teste' }**.
    - Se você pretende usar um controller, você pode definir a rota para chamar uma ação específica do controller.
 
 ## Etapa 4 - Conecte com banco de dados
 
-4.1 Vá na seguinte pasta do seu projeto Sails:
+a) Vá na seguinte pasta do seu projeto Sails:
 * **Config**
 	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
  		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, **apague** e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
