@@ -128,8 +128,8 @@ No terminal, dê um ```sails lift``` na mesma pasta do seu projeto.
 Caso apareça as velas, isto é, sails, sucesso na conexão!
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png">
-   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/velasOk.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/velasOk.png)">
 </picture>
  
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
