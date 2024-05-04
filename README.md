@@ -35,28 +35,43 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
 * api
    * models
 
+* config
+   * datastore.js
+
+* config
+   * routes.js 
+
 * views
-   * pastas 
+   * pastas que você irá criar
 
-## Etapa 2 - Adicionando uma página .ejs com código HTML:
+* package.json (penúltimo arquivo)
 
-2.1 Crie um novo arquivo .ejs dentro do diretório `views`.
-   - Você pode nomear o arquivo de acordo com a página que deseja criar, por exemplo, `teste.ejs`.
+## Etapa 2 - Adicionando uma página .ejs com código HTML
+
+2.1 Crie um novo arquivo .ejs dentro do diretório **views**.
+   - Você pode nomear o arquivo de acordo com a página que deseja criar, por exemplo, **teste.ejs**.
 
 2.2 Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da página.
 
-**Para configurar uma rota para esta página:**
 
-6. Abra o arquivo `config/routes.js`.
-7. Adicione uma nova rota para a página criada.
-   - Se você está apenas exibindo uma view, use o formato `'GET /teste': { view: 'teste' }`.
+## Etapa 3 - Configure uma rota para esta página
+
+3.1 Abra o arquivo **config/routes.js**.
+3.2 Adicione uma nova rota para a página criada.
+   - Se você está apenas exibindo uma view, use o formato **'GET /teste': { view: 'teste' }**.
    - Se você pretende usar um controller, você pode definir a rota para chamar uma ação específica do controller.
 
-**Para conectar com banco de dados:**
+## Etapa 4 - Conecte com banco de dados
 
-8. Configure a conexão com o banco de dados:
-   - Abra o arquivo `config/datastores.js`.
-   - Adicione as informações de conexão, como adapter, URL e, se necessário, SSL.
+4.1 Vá na seguinte pasta do seu projeto Sails:
+* **Config**
+	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
+ 		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, **apague** e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
+   		* **linha 52** adicione ```url: 'postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi',```
+       		* **linha 53** adicione ```ssl: true```
+
+
+
 9. Configure as opções do modelo:
    - Abra o arquivo `config/models.js`.
    - Configure `migrate: 'alter'` para que as alterações no modelo sejam automaticamente refletidas no banco de dados.
