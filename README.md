@@ -33,7 +33,7 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
 ## Módulos e pacotes do Node.js
 
 * npm --> gerenciador de pacotes que dá acesso ao repositório do Node.js com milhares de arquivos
-* requeire () --> usado para importar módulos no Node.js
+* requeire ( ) --> usado para importar módulos no Node.js
 * package.js --> usado para gerenciar as dependências da sua aplicação
 
 ### Arquitetura Node.js vs Arquitetura Tradicional
@@ -93,7 +93,32 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * pastas que você irá criar
 
 * package.json (penúltimo arquivo)
-  
+
+## Etapa 1 - Configurando o datastores.js
+
+a) Vá na seguinte pasta do seu projeto Sails:
+* **Config**
+	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
+ 		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, **apague** e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
+   		* **linha 52** adicione a sua URL do seu Render como assim ```url: 'postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi',```
+       		* **linha 53** adicione ```ssl: true```
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
+</picture>
+
+## Etapa 2 - Configure o package.json
+
+a) Busque pelo arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql). Esse site é a documentação.
+
+b) Mas para instalar a biblioteca do **PostgreSQL** no seu projeto, digite esse comando dentro da pasta do seu projeto usando o terminal ```npm install sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png)">
+</picture>
+
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
@@ -110,16 +135,6 @@ b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da pá
 </form>
 
 ```
-## Etapa 3 - Configure o package.json
-
-a) Busque pelo arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql). Esse site é a documentação.
-
-b) Mas para instalar a biblioteca do **PostgreSQL** no seu projeto, digite esse comando dentro da pasta do seu projeto usando o terminal ```npm install sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
-
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
-   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png)">
-</picture>
 
 ## Etapa 3 - Configure uma rota para esta página
 
@@ -128,19 +143,6 @@ b) Adicione uma nova rota para a página criada.
    - Se você está apenas exibindo uma view, use o formato **'GET /teste': { view: 'teste' }**.
    - Se você pretende usar um controller, você pode definir a rota para chamar uma ação específica do controller.
 
-## Etapa 4 - Conecte com banco de dados
-
-a) Vá na seguinte pasta do seu projeto Sails:
-* **Config**
-	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
- 		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, **apague** e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
-   		* **linha 52** adicione a sua URL do seu Render como assim ```url: 'postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi',```
-       		* **linha 53** adicione ```ssl: true```
-
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
-   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
-</picture>
 
 
 9. Configure as opções do modelo:
