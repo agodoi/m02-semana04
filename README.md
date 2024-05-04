@@ -32,6 +32,11 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
   	* Gerencia fila de eventos de forma eficiente, executando-os ordenadamente;
   	* É bão na tolerância de falhas, mantendo sua aplicação em execução.
 
+## Módulos e pacotes do Node.js
+
+* npm --> gerenciador de pacotes que dá acesso ao repositório do Node.js com milhares de arquivos
+* requeire () --> usado para importar módulos no Node.js
+* package.js --> usado para gerenciar as dependências da sua aplicação
 
 ### Arquitetura Node.js vs Arquitetura Tradicional
 
