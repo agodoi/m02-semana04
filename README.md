@@ -125,13 +125,63 @@ Caso queira acessar a documentação [https://www.npmjs.com/package/sails-postgr
 
 No terminal, dê um ```sails lift``` na mesma pasta do seu projeto.
 
-Caso apareça as velas, isto é, sails, sucesso na conexão!
+Caso apareça as velas, isto é, sails, sucesso na conexão!!! Se você for no seu DBeaver e conferir o que está no seu banco de dados, vai notar que não mudou nada em suas tabelas porque até o momento não criamos nenhum **model** novo nesse projeto.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/velaOk.png">
    <img alt="Velas" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/velaOk.png)">
 </picture>
  
+
+## Etapa 5 - Criando um model (tabela)
+
+a) No seu terminal e dentro da pasta do projeto, digite ```sails generate model myTable``` (enter). Ele vai criar um arquivo chamado **myTable** no modelo Sails na pasta \api\models. Você poderia criar um arquivo manualmente **myTable.js** sem problemas. 
+
+b) Confira em api/models se seu arquivo **myTable** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo.
+
+c) Na linha 9, dentro do **module.exports**, você vai criar os atributos da sua tabela colando esse código:
+
+```
+module.exports = {
+tableName: "tasks",
+  attributes: {
+    id: {
+      type: "number",
+      autoIncrement: true,
+    },
+    title: {
+      type: "string",
+      required: true, //signica que é not null
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    dueDate: {
+      type: "string",
+      required: true,
+    },
+    status: {
+      type: "string",
+      required: true,
+    },
+    createdData:{
+      type: "string",
+      required: true,
+    },
+    type: {
+      type: "string",
+      defaultsTo: "others", //se passar NULL, automaticamente preencha com "others"
+    },
+  },
+};
+```
+d) Os desenhos Sails que estão em forma de comentários, você pode apagar.
+
+e) Depois, digite ```sails lift``` no terminal e após aparecer a Vela do Sails, vá no seu DBeaver e confira se subiu a nova tabela.
+
+
+
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
 a) Crie um novo arquivo .ejs dentro do diretório **views**.
