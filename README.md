@@ -94,7 +94,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
 
 * package.json (penúltimo arquivo)
 
-## Etapa 1 - Configurando o datastores.js
+## Etapa 2 - Configurando o datastores.js
 
 a) Vá na seguinte pasta do seu projeto Sails:
 * **Config**
@@ -108,17 +108,29 @@ a) Vá na seguinte pasta do seu projeto Sails:
    <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
 </picture>
 
-## Etapa 2 - Configure o package.json
+## Etapa 3 - Configure o package.json
 
-a) Busque pelo arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql). Esse site é a documentação.
+a) Busque pelo arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos que instalar manualmente. 
 
-b) Mas para instalar a biblioteca do **PostgreSQL** no seu projeto, digite esse comando dentro da pasta do seu projeto usando o terminal ```npm install sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
+b) Para instalar a biblioteca do **PostgreSQL** no seu projeto, digite esse comando **dentro da pasta do seu projeto** usando o terminal ```npm install sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
    <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png)">
 </picture>
 
+Caso queira acessar a documentação [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql).
+
+## Etapa 4 - Testando a conexão
+
+No terminal, dê um ```sails lift``` na mesma pasta do seu projeto.
+
+Caso apareça as velas, isto é, sails, sucesso na conexão!
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/velasOk.png)">
+</picture>
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
