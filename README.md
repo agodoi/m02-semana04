@@ -52,8 +52,11 @@ E o Sails? É um framework web MVC (Model-View-Controller) para Node.js, projeta
 
 Conclusão:
 
-* Node.js
-	* Sails 
+* Em 1º preciso do Node.js
+	* Em 2º vem o Sails
+ 		* Controller
+   		* Model
+   		* View	 
 
 
 
