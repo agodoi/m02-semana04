@@ -182,11 +182,11 @@ e) Depois, digite ```sails lift``` no terminal e dentro da pasta do seu projeto;
 
 f) O prompt vai te perguntar se você quer trabalhar como:
 
-**1) FOR DEV**	--> faz alter
+**1) FOR DEV**	--> 	faz alter (adiciona dados), cria tabelas, mas não deleta colunas
 
-**2) TESTS**	--> faz drop
+**2) TESTS**	--> 	faz drop, zera tudo em cascata (devido à primary key e foreing key) e recomeça a tabela.
 
-**3) STAGING** 	--> quando você está em produção, pois ele não altera o banco. Trabalhar em produção é quando usuários reais utilizam seu projeto.
+**3) STAGING** 	--> 	quando você está em produção, pois ele não altera o banco. Trabalhar em produção é quando usuários reais utilizam seu projeto.
 
 
 
