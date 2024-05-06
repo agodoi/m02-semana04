@@ -229,7 +229,7 @@ module.exports = {
         .fetch()
         .exec(function(err){
             if(err) return (err);
-            return res.json({ message: "Task created successfully" });
+            return res.json({ sucess: "Parabens! Sua tabela foi criada." });
     });
   },
 
@@ -251,14 +251,14 @@ module.exports = {
   update: async function (req,res){
     Task.update({ id: req.params.id }, req.body).exec(function(err) {
         if(err) return res.serverError(err);
-        return res.json({message: "Task updated successfully"});
+        return res.json({message: "Tabela atualizada com sucesso."});
     });
   },
 
   delete: async function (req,res){
     Task.destroy({ id: req.params.id }, req.body).exec(function(err) {
         if(err) return res.serverError(err);
-        return res.json({message: "Task deleted successfully"});
+        return res.json({message: "Tabela apagada com sucesso."});
     });
   },
 };
