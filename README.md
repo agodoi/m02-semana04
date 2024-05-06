@@ -211,7 +211,127 @@ Deve aparecer essa mensagem: **info: Created a new controller ("heroes") at api/
 
 E se você for em **api/controller** verá um novo arquivo **HeroesController.js**.
 
-c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions) onde você poderá explorar todas as opções do Sails.
+c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions) onde você poderá explorar todas as opções do Sails. Nesse help você fica sabendo as ações possíveis dentro do Controller.
+
+d) Copie esse código e cole no seu **api/controller/HeroesController.js**.
+
+```
+/**
+ * HeroesController
+ *
+ * @description :: Server-side actions for handling incoming requests.
+ * @help        :: See https://sailsjs.com/docs/concepts/actions
+ */
+
+module.exports = {
+  create: async function(req, res){
+    Task.create(req.body)
+        .fetch()
+        .exec(function(err){
+            if(err) return (err);
+            return res.json({ message: "Task created successfully" });
+    });
+  },
+
+  getALL: async function(req, res){
+    Task.find().exec(function(err,tasks){
+        if(err) return res.severError(err);
+        return res.json(tasks);
+    });
+  },
+
+  getById: async function(req, res){
+    Task.findOne({ id: req.params.id }).exec(function(errs, task){
+        if(err) return res.serverError(err);
+        if(!task) return res.notFound();
+        return res.json(task);  
+    });
+  },
+
+  update: async function (req,res){
+    Task.update({ id: req.params.id }, req.body).exec(function(err) {
+        if(err) return res.serverError(err);
+        return res.json({message: "Task updated successfully"});
+    });
+  },
+
+  delete: async function (req,res){
+    Task.destroy({ id: req.params.id }, req.body).exec(function(err) {
+        if(err) return res.serverError(err);
+        return res.json({message: "Task deleted successfully"});
+    });
+  },
+};
+```
+
+
+## Etapa 7 - Configurando routes.js
+
+Esse arquivo serve para configurar as rotas. 
+
+Por exemplo, se você digitar no seu navegador **http://localhost:1337/** ele vai mandar carregar alguma homepage com a simples **/**.
+
+```
+'/': { view: 'pages/homepage' },
+```
+
+Outro exemplo: se digitar  **http://localhost:1337/minhaPagina**, o routes ficaria assim:
+
+```
+'/minhaPagina': { view: 'pages/minhaPagina' },
+```
+
+Portanto, copie e cole esse código para o seu routes.js
+
+```
+/**
+ * Route Mappings
+ * (sails.config.routes)
+ *
+ * Your routes tell Sails what to do each time it receives a request.
+ *
+ * For more information on configuring custom routes, check out:
+ * https://sailsjs.com/anatomy/config/routes-js
+ */
+
+module.exports.routes = {
+
+  /***************************************************************************
+  *                                                                          *
+  * Make the view located at `views/homepage.ejs` your home page.            *
+  *                                                                          *
+  * (Alternatively, remove this and add an `index.html` file in your         *
+  * `assets` directory)                                                      *
+  *                                                                          *
+  ***************************************************************************/
+
+  '/': { view: 'pages/homepage' },
+  '/minhaPagina': { view: 'pages/minhaPagina' },
+  "POST / tasks": "TasksController.create",
+  "GET / tasks": "TasksController.getAll",
+  "GET / tasks/:id": "TasksController.getById",
+  "PUT / tasks/:id": "TasksController.update",
+  "DELETE / tasks/:id": "TasksController.delete",
+
+    /***************************************************************************
+    *                                                                          *
+    * More custom routes here...                                               *
+    * (See https://sailsjs.com/config/routes for examples.)                    *
+    *                                                                          *
+    * If a request to a URL doesn't match any of the routes in this file, it   *
+    * is matched against "shadow routes" (e.g. blueprint routes).  If it does  *
+    * not match any of those, it is matched against static assets.             *
+    *                                                                          *
+    ***************************************************************************/
+  };
+```
+
+
+
+a) Primeiramente, crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File** 
+
+
+
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
