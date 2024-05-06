@@ -336,19 +336,15 @@ b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 ```
 c) Sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``` no terminal e dentro da pasta do seu projeto e depois, opte por **1) FOR DEV**.
 
-* api
-   * controllers
-
-* api
-   * models
-
-* config
-   * datastore.js
-
-* config
-   * routes.js 
-
-* views
-   * pastas que você irá criar
-
+* api / controllers
+* api / models
+* config / datastore.js
+* config / routes.js 
+* views / pastas que você irá criar
 * package.json (penúltimo arquivo)
+
+d) Copie e cole esse front-ende básico no seu arquivo **minhaPasta.ejs**:
+
+```
+colar o HTML aqui
+```
