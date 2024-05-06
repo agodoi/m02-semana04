@@ -137,7 +137,7 @@ Caso apareça as velas, isto é, sails, sucesso na conexão!!! Se você for no s
 
 a) No seu terminal e dentro da pasta do projeto, digite ```sails generate model myTable``` (enter). Ele vai criar um arquivo chamado **myTable** no modelo Sails na pasta \api\models. Você poderia criar um arquivo manualmente **myTable.js** sem problemas. 
 
-b) Confira em api/models se seu arquivo **myTable** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo.
+b) Confira em api/models se seu arquivo **myTable** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
 
 c) Na linha 9, dentro do **module.exports**, você vai criar os atributos da sua tabela colando esse código:
 
