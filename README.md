@@ -348,3 +348,7 @@ d) Copie e cole esse front-ende básico no seu arquivo **minhaPasta.ejs**:
 ```
 colar o HTML aqui
 ```
+
+## Etapa 9 - Testando finalmente sua integração
+
+a) Vá no seu DBeaver e confira se sua tabela está com os dados que o front-end postou.
