@@ -314,13 +314,13 @@ O que está acontecendo no routes?
 * A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
 * A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
 
-## Etapa 2 - Adicionando uma página .ejs com código HTML
+## Etapa 8 - Adicionando uma página .ejs com código HTML
 
-Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho.
+Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho e bonitinho.
 
 a) Crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
 
-b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da página.
+b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 
 ```
 <form action="/salvarDado" method="post">
@@ -330,3 +330,21 @@ b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da pá
 </form>
 
 ```
+c) Sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``` no terminal e dentro da pasta do seu projeto e depois, opte por **1) FOR DEV**.
+
+* api
+   * controllers
+
+* api
+   * models
+
+* config
+   * datastore.js
+
+* config
+   * routes.js 
+
+* views
+   * pastas que você irá criar
+
+* package.json (penúltimo arquivo)
