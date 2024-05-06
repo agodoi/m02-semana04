@@ -200,6 +200,19 @@ Se tudo correu bem, você terá em seu Dbeaver algo assim como na figura:
    <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/dbeaver_ok2.png)">
 </picture>
 
+
+## Etapa 6 - Criando um controller
+
+a) Vá no seu terminal, dentro da pasta do projeto, e se você não estiver vendo o path do seu projeto, dê um **Ctrl + C**;
+
+b) Digite ```sails generate controller heroes (nome do controller sempre no plural como boas práticas);
+
+Deve aparecer essa mensagem: **info: Created a new controller ("heroes") at api/controllers/HeroesController.js!**
+
+E se você for em **api/controller** verá um novo arquivo **HeroesController.js**.
+
+c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions)
+
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
 a) Crie um novo arquivo .ejs dentro do diretório **views**.
