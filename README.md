@@ -314,6 +314,10 @@ O que está acontecendo no routes?
 * A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
 * A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
 
+#### Boas práticas:
+
+* Se o Visual Code mudar **POST** para **post**, não deixa ficar assim. Sempre deixe padronizado para POST, GET, PUT, DELETE
+
 ## Etapa 8 - Adicionando uma página .ejs com código HTML
 
 Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho e bonitinho.
