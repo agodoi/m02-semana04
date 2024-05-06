@@ -334,7 +334,7 @@ b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 </form>
 
 ```
-c) Sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``` no terminal e dentro da pasta do seu projeto e depois, opte por **1) FOR DEV**.
+c) Lembre-se de sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``` no terminal e dentro da pasta do seu projeto e depois, opte por **1) FOR DEV**.
 
 * api / controllers
 * api / models
@@ -342,12 +342,6 @@ c) Sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``
 * config / routes.js 
 * views / pastas que você irá criar
 * package.json (penúltimo arquivo)
-
-d) Copie e cole esse front-ende básico no seu arquivo **minhaPasta.ejs**:
-
-```
-colar o HTML aqui
-```
 
 ## Etapa 9 - Testando finalmente sua integração
 
