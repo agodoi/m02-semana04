@@ -196,8 +196,8 @@ g) Aguarde o aparecimento da Vela do Sails no seu terminal e vá no seu DBeaver 
 Se tudo correu bem, você terá em seu Dbeaver algo assim como na figura:
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/velaOk.png">
-   <img alt="Velas" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/velaOk.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/Dbeaverok.png">
+   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/Dbeaverok.png)">
 </picture>
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
