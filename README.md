@@ -314,19 +314,11 @@ O que está acontecendo no routes?
 * A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
 * A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
 
-
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
+Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho.
 
-a) Primeiramente, crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File** 
-
-
-
-
-
-
-a) Crie um novo arquivo .ejs dentro do diretório **views**.
-   - Você pode nomear o arquivo de acordo com a página que deseja criar, por exemplo, **teste.ejs**.
+a) Crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
 
 b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da página.
 
@@ -338,29 +330,3 @@ b) Escreva o código HTML dentro do arquivo .ejs para definir o conteúdo da pá
 </form>
 
 ```
-
-## Etapa 3 - Configure uma rota para esta página
-
-a) Abra o arquivo **config/routes.js**.
-b) Adicione uma nova rota para a página criada.
-   - Se você está apenas exibindo uma view, use o formato **'GET /teste': { view: 'teste' }**.
-   - Se você pretende usar um controller, você pode definir a rota para chamar uma ação específica do controller.
-
-
-
-9. Configure as opções do modelo:
-   - Abra o arquivo `config/models.js`.
-   - Configure `migrate: 'alter'` para que as alterações no modelo sejam automaticamente refletidas no banco de dados.
-10. Crie um novo modelo:
-    - Execute o comando `sails generate model nome-model`.
-    - Isso criará um novo modelo com o nome especificado.
-11. Edite o arquivo do modelo criado para adicionar os atributos necessários.
-
-**Para criar o respectivo controller:**
-
-12. Crie o controller associado ao modelo:
-    - Execute o comando `sails generate controller NomeModel`.
-    - Isso criará um novo controller com métodos CRUD básicos para o modelo especificado.
-13. Edite o controller gerado conforme necessário para adicionar lógica personalizada para cada ação CRUD.
-
-Seguindo esses passos, você será capaz de criar um projeto Sails, adicionar páginas, configurar rotas e conectar-se a um banco de dados, tudo de forma clara e didática. Certifique-se de ajustar os nomes e detalhes conforme necessário para atender às necessidades específicas do seu projeto.
