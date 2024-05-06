@@ -296,15 +296,6 @@ Portanto, copie e cole esse código para o seu routes.js
 
 module.exports.routes = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` your home page.            *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
-
   '/': { view: 'pages/homepage' },
   '/minhaPagina': { view: 'pages/minhaPagina' },
   "POST / tasks": "TasksController.create",
@@ -312,20 +303,19 @@ module.exports.routes = {
   "GET / tasks/:id": "TasksController.getById",
   "PUT / tasks/:id": "TasksController.update",
   "DELETE / tasks/:id": "TasksController.delete",
-
-    /***************************************************************************
-    *                                                                          *
-    * More custom routes here...                                               *
-    * (See https://sailsjs.com/config/routes for examples.)                    *
-    *                                                                          *
-    * If a request to a URL doesn't match any of the routes in this file, it   *
-    * is matched against "shadow routes" (e.g. blueprint routes).  If it does  *
-    * not match any of those, it is matched against static assets.             *
-    *                                                                          *
-    ***************************************************************************/
-  };
+};
 ```
 
+O que está acontecendo no routes?
+
+* **'/':** está sendo direcionado para **/pages/homepage** que é uma página que já existe no exemplo vazio do Sails
+* **/minhaPagina:** está sendo direcionado para um arquivo que vamos criar chamado pages/minhaPagina
+* A tarefa POST (que é o mesmo que CREATE) será direcionado para TasksController.create
+* A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
+* A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
+
+
+## Etapa 2 - Adicionando uma página .ejs com código HTML
 
 
 a) Primeiramente, crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File** 
@@ -333,7 +323,7 @@ a) Primeiramente, crie um arquivo dentro da pasta **views/pages** chamado **minh
 
 
 
-## Etapa 2 - Adicionando uma página .ejs com código HTML
+
 
 a) Crie um novo arquivo .ejs dentro do diretório **views**.
    - Você pode nomear o arquivo de acordo com a página que deseja criar, por exemplo, **teste.ejs**.
