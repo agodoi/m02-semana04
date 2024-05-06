@@ -211,7 +211,7 @@ Deve aparecer essa mensagem: **info: Created a new controller ("heroes") at api/
 
 E se você for em **api/controller** verá um novo arquivo **HeroesController.js**.
 
-c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions)
+c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions) onde você poderá explorar todas as opções do Sails.
 
 ## Etapa 2 - Adicionando uma página .ejs com código HTML
 
