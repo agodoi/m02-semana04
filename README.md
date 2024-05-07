@@ -299,17 +299,17 @@ module.exports.models = {
 
 ## Etapa 7 - Criando um controller
 
-a) Vá no seu terminal, dentro da pasta do projeto, e se você não estiver vendo o path do seu projeto, dê um **Ctrl + C**;
+a) Vá no seu terminal, dentro da pasta do projeto, e se você não estiver vendo o path do seu projeto, dê um **Ctrl+C**;
 
-b) Digite ```sails generate controller heroes (nome do controller sempre no plural como boas práticas);
+b) Digite ```sails generate controller HeroesController``` (nome do controller sempre no plural como boas práticas);
 
-Deve aparecer essa mensagem: **info: Created a new controller ("heroes") at api/controllers/HeroesController.js!**
+Deve aparecer essa mensagem: **info: Created a new controller ("HeroesController") at api/controllers/HeroesControllerController.js!**
 
 E se você for em **api/controller** verá um novo arquivo **HeroesController.js**.
 
 c) Note que cada arquivo gerado no Sails possui um help [https://sailsjs.com/docs/concepts/actions](https://sailsjs.com/docs/concepts/actions) onde você poderá explorar todas as opções do Sails. Nesse help você fica sabendo as ações possíveis dentro do Controller.
 
-d) Copie esse código e cole no seu **api/controller/HeroesController.js**.
+d) Copie esse código e cole no seu **api/controller/HeroesController.js**. Mas antes, apague tudo o que está no api/controller/HeroesController.js.
 
 ```
 /**
@@ -371,10 +371,10 @@ Por exemplo, se você digitar no seu navegador **http://localhost:1337/** ele va
 '/': { view: 'pages/homepage' },
 ```
 
-Outro exemplo: se digitar  **http://localhost:1337/minhaPagina**, o routes ficaria assim:
+Outro exemplo: se digitar  **http://localhost:1337/heroe**, o routes ficaria assim:
 
 ```
-'/minhaPagina': { view: 'pages/minhaPagina' },
+'/minhaPagina': { view: 'pages/mypage' },
 ```
 
 Portanto, copie e cole esse código para o seu routes.js
@@ -405,7 +405,7 @@ module.exports.routes = {
 O que está acontecendo no routes?
 
 * **'/':** está sendo direcionado para **/pages/homepage** que é uma página que já existe no exemplo vazio do Sails
-* **/minhaPagina:** está sendo direcionado para um arquivo que vamos criar chamado pages/minhaPagina
+* **/mypage:** está sendo direcionado para um arquivo que vamos criar chamado pages/minhaPagina
 * A tarefa POST (que é o mesmo que CREATE) será direcionado para TasksController.create
 * A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
 * A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
@@ -424,7 +424,7 @@ b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 
 ```
   <section>
-    <form name="task-form" action="/heroes" method="post">
+    <form name="task-form" action="/heroe" method="post">
       <label for="cpf">CPF:</label>
       <input type="text" id="cpf" name="cpf" required><br>
   
