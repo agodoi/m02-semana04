@@ -93,7 +93,7 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * routes.js
 
 * views
-   * pastas que você irá criar
+   * pastas que você irá criar (nesse caso será **mypages**)
 
 * package.json (penúltimo arquivo)
 
@@ -362,7 +362,7 @@ module.exports = {
 ```
 
 
-## Etapa 7 - Configurando routes.js
+## Etapa 8 - Configurando routes.js
 
 Esse arquivo serve para configurar as rotas. 
 
@@ -394,12 +394,12 @@ Portanto, copie e cole esse código para o seu routes.js
 module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
-  '/minhaPagina': { view: 'pages/minhaPagina' },
-  "POST / tasks": "TasksController.create",
-  "GET / tasks": "TasksController.getAll",
-  "GET / tasks/:id": "TasksController.getById",
-  "PUT / tasks/:id": "TasksController.update",
-  "DELETE / tasks/:id": "TasksController.delete",
+  '/mypage': { view: 'pages/mypage' },
+  "POST /heroes": "HeroesController.create",
+  "GET /heroes": "HeroesController.getAll",
+  "GET /heroes/:id": "HeroesController.getById",
+  "PUT /heroes/:id": "HeroesController.update",
+  "DELETE /heroes/:id": "HeroesController.delete",
 };
 ```
 
@@ -419,17 +419,35 @@ O que está acontecendo no routes?
 
 Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho e bonitinho.
 
-a) Crie um arquivo dentro da pasta **views/pages** chamado **minhaPagina.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
+a) Crie um arquivo dentro da pasta **views/pages** chamado **myPage.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
 
 b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 
 ```
-<form action="/salvarDado" method="post">
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nome" required>
-  <button type="submit">Salvar</button>
-</form>
-
+  <section>
+    <form name="task-form" action="/heroes" method="post">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" required><br>
+  
+      <label for="name">Primeiro Nome:</label>
+      <input type="text" id="name" name="name" required><br>
+  
+      <label for="last_name">Último Nome:</label>
+      <input type="text" id="last_name" name="last_name" required><br>
+  
+      <label for="age">Idade:</label>
+      <input type="text" id="age" name="age" required><br>
+  
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" required><br>
+  
+      <label for="type">Tipo:</label>
+      <input type="text" id="type" name="type" value="others"><br>
+  
+      <input type="submit" value="Salvar">
+  
+    </form>
+  </section>
 ```
 c) Lembre-se de sempre que alterar alguma coisa essas pastas/arquivos, digite ```sails lift``` no terminal e dentro da pasta do seu projeto e depois, opte por **1) FOR DEV**.
 
