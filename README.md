@@ -78,24 +78,24 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
 ## Quais as pastas importantes?
 
 * api
-   * controllers
+   * controllers --> responsável por lidar com as requisições HTTP relacionadas às operações CRUD (Create, Read, Update, Delete) em uma entidade chamada "Heroe".
 
 * api
-   * models
+   * models --> são as tabelas organizadas em arquivos.js
 
 * config
-   * datastore.js
+   * datastore.js --> credenciais do seu banco Render
 
 * config
-   * models.js 
+   * models.js --> model pai de todos os models. O que for feito aqui, será feito em todos os models
 
 * config
-   * routes.js
+   * routes.js --> são rotas que determinam como o aplicativo deve responder a diferentes requisições HTTP que chegam ao servidor.
 
 * views
-   * pastas que você irá criar (nesse caso será **mypages**)
+   * pastas que você irá criar (nesse caso será **mypages**). --> será o seu front-end
 
-* package.json (penúltimo arquivo)
+* package.json (penúltimo arquivo) --> indica como estão as instâncias necessárias para o seu projeto.
 
 ## Etapa 2 - Configurando o datastores.js
 
