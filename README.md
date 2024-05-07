@@ -418,7 +418,7 @@ O que está acontecendo no routes?
 
 Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho e bonitinho.
 
-a) Crie um arquivo dentro da pasta **views/pages** chamado **myPage.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
+a) Crie um arquivo dentro da pasta **views/pages** chamado **mypage.ejs**. Para criar um novo arquivo, clique com o botão direito do mouse sobre a pasta **views/pages** e escolha **New File**. Essa será a sua primeira página HTML daqui alguns instantes.
 
 b) Escreva o código HTML dentro do arquivo .ejs que você acabou de criar.
 
