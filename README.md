@@ -301,9 +301,9 @@ module.exports.models = {
 
 a) Vá no seu terminal, dentro da pasta do projeto, e se você não estiver vendo o path do seu projeto, dê um **Ctrl+C**;
 
-b) Digite ```sails generate controller HeroesController``` (nome do controller sempre no plural como boas práticas);
+b) Digite ```sails generate controller Heroes``` (nome do controller sempre no plural como boas práticas);
 
-Deve aparecer essa mensagem: **info: Created a new controller ("HeroesController") at api/controllers/HeroesControllerController.js!**
+Deve aparecer essa mensagem: **info: Created a new controller ("Heroes") at api/controllers/HeroesController.js!**
 
 E se você for em **api/controller** verá um novo arquivo **HeroesController.js**.
 
@@ -313,7 +313,7 @@ d) Copie esse código e cole no seu **api/controller/HeroesController.js**. Mas 
 
 ```
 /**
- * HeroesController
+ * Heroes
  *
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
@@ -405,10 +405,10 @@ module.exports.routes = {
 O que está acontecendo no routes?
 
 * **'/':** está sendo direcionado para **/pages/homepage** que é uma página que já existe no exemplo vazio do Sails
-* **/mypage:** está sendo direcionado para um arquivo que vamos criar chamado pages/minhaPagina
-* A tarefa POST (que é o mesmo que CREATE) será direcionado para TasksController.create
-* A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para TasksController.getAll
-* A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para TasksController.getById
+* **/mypage:** está sendo direcionado para um arquivo que vamos criar chamado pages/mypage
+* A tarefa POST (que é o mesmo que CREATE) será direcionado para HeroesController.create
+* A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para HeroesController.getAll
+* A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para HeroesController.getById
 
 #### Boas práticas:
 
