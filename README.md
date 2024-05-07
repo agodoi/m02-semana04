@@ -87,7 +87,10 @@ d) Ainda no terminal, entre na pasta recém criada do projeto e digite **code .*
    * datastore.js
 
 * config
-   * routes.js 
+   * models.js 
+
+* config
+   * routes.js
 
 * views
    * pastas que você irá criar
@@ -142,30 +145,33 @@ b) Confira em api/models se seu arquivo **myTable** foi criado e pode deletar o 
 c) Na linha 9, dentro do **module.exports**, você vai criar os atributos da sua tabela colando esse código:
 
 ```
+/**
+ * MyTable.js
+ *
+ * @description :: A model definition represents a database table/collection.
+ * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ */
+
 module.exports = {
-tableName: "tasks",
+tableName: "heroe",
   attributes: {
-    id: {
-      type: "number",
-      autoIncrement: true,
+    cpf: {
+      type: "string", //pode ter string, bool, float e number
+      required: true, //signica que é not null
     },
-    title: {
+    name: {
       type: "string",
       required: true, //signica que é not null
     },
-    description: {
+    last_name: {
       type: "string",
       required: true,
     },
-    dueDate: {
+    age: {
       type: "string",
       required: true,
     },
     status: {
-      type: "string",
-      required: true,
-    },
-    createdData:{
       type: "string",
       required: true,
     },
@@ -292,7 +298,7 @@ module.exports.models = {
 
 ```
 
-## Etapa 6 - Criando um controller
+## Etapa 7 - Criando um controller
 
 a) Vá no seu terminal, dentro da pasta do projeto, e se você não estiver vendo o path do seu projeto, dê um **Ctrl + C**;
 
@@ -316,23 +322,23 @@ d) Copie esse código e cole no seu **api/controller/HeroesController.js**.
 
 module.exports = {
   create: async function(req, res){
-    Task.create(req.body)
+     Heroe.create(req.body)
         .fetch()
         .exec(function(err){
             if(err) return (err);
-            return res.json({ sucess: "Parabens! Sua tabela foi criada." });
+            return res.json({ sucess: "Parabéns! Seu herói foi criada." });
     });
   },
 
   getALL: async function(req, res){
-    Task.find().exec(function(err,tasks){
+    Heroe.find().exec(function(err,tasks){
         if(err) return res.severError(err);
         return res.json(tasks);
     });
   },
 
   getById: async function(req, res){
-    Task.findOne({ id: req.params.id }).exec(function(errs, task){
+    Heroe.findOne({ id: req.params.id }).exec(function(errs, task){
         if(err) return res.serverError(err);
         if(!task) return res.notFound();
         return res.json(task);  
@@ -340,16 +346,16 @@ module.exports = {
   },
 
   update: async function (req,res){
-    Task.update({ id: req.params.id }, req.body).exec(function(err) {
+    Heroe.update({ id: req.params.id }, req.body).exec(function(err) {
         if(err) return res.serverError(err);
-        return res.json({message: "Tabela atualizada com sucesso."});
+        return res.json({message: "Herói atualizado com sucesso."});
     });
   },
 
   delete: async function (req,res){
-    Task.destroy({ id: req.params.id }, req.body).exec(function(err) {
+    Heroe.destroy({ id: req.params.id }, req.body).exec(function(err) {
         if(err) return res.serverError(err);
-        return res.json({message: "Tabela apagada com sucesso."});
+        return res.json({message: "Herói apagado com sucesso."});
     });
   },
 };
