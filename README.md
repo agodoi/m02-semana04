@@ -138,9 +138,9 @@ Caso apareça as velas, isto é, sails, sucesso na conexão!!! Se você for no s
 
 ## Etapa 5 - Criando um model (tabela)
 
-a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model Heroe``` (enter). Ele vai criar um arquivo chamado **Heroe** no modelo Sails na pasta \api\models. Você poderia criar um arquivo manualmente **Heroe.js** sem problemas. 
+a) No seu terminal, dê um **Ctrl+C** e dentro da pasta do projeto, digite ```sails generate model Heroe``` (enter). Ele vai criar um arquivo chamado **Heroe** no modelo Sails na pasta **\api\models**. Você poderia criar um arquivo manualmente **Heroe.js** sem problemas com o botão direito do mouse.
 
-b) Confira em api/models se seu arquivo **Heroe** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
+b) Confira em **api/models** se seu arquivo **Heroe.js** foi criado e pode deletar o arquivo **.gitkeep**. Não vamos utilizá-lo. Esse arquivo aparece para manter a pasta não-vazia.
 
 c) Copie e cole esse código dentro do **api/models/Heroe.js**
 ```
