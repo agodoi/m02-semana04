@@ -414,7 +414,7 @@ O que está acontecendo no routes?
 
 * Se o Visual Code mudar **POST** para **post**, não deixa ficar assim. Sempre deixe padronizado para POST, GET, PUT, DELETE
 
-## Etapa 8 - Adicionando uma página .ejs com código HTML
+## Etapa 9 - Adicionando uma página .ejs com código HTML
 
 Essa etapa serve para você criar todas as suas homepages e todas elas devem ficar dentro da pasta **view** para ficar tudo ornganizadinho e bonitinho.
 
@@ -457,6 +457,6 @@ c) Lembre-se de sempre que alterar alguma coisa essas pastas/arquivos, digite ``
 * views / pastas que você irá criar
 * package.json (penúltimo arquivo)
 
-## Etapa 9 - Testando finalmente sua integração
+## Etapa 10 - Testando finalmente sua integração
 
 a) Vá no seu DBeaver e confira se sua tabela está com os dados que o front-end postou.
