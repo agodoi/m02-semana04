@@ -459,4 +459,19 @@ c) Lembre-se de sempre que alterar alguma coisa essas pastas/arquivos, digite ``
 
 ## Etapa 10 - Testando finalmente sua integração
 
-a) Vá no seu DBeaver e confira se sua tabela está com os dados que o front-end postou.
+a) Abra o seu navegador e digite na URL: http://localhost:1337 que vai entrar a página da home
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="">
+   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE]()">
+</picture>
+
+b) Agora, acrescente http://localhost:1337/mypage que vai carregar o formulário de entrada de dados.
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="">
+   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE]()">
+</picture>
+
+
+c) Vá no seu DBeaver e confira se sua tabela está com os dados que o front-end postou.
