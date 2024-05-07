@@ -462,15 +462,15 @@ c) Lembre-se de sempre que alterar alguma coisa essas pastas/arquivos, digite ``
 a) Abra o seu navegador e digite na URL: http://localhost:1337 que vai entrar a página da home
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="">
-   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE]()">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/PaginaHome.png">
+   <img alt="Página home Sails!" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/PaginaHome.png)">
 </picture>
 
 b) Agora, acrescente http://localhost:1337/mypage que vai carregar o formulário de entrada de dados.
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="">
-   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE]()">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana04/blob/main/imgs/NavegadorOk.png">
+   <img alt="DBeaver OK!" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana04/blob/main/imgs/NavegadorOk.png)">
 </picture>
 
 
