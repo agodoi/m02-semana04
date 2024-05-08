@@ -46,7 +46,7 @@ Nesta instrução, praticaremos a construção de aplicações utilizando o Node
 
 ## No seu projeto
 
-O Node.js será o **interpretador** (e não compilador) do seu JS fora do navegador e suportará o funcionamento da rede (Internet) para você chegar até o seu banco de dados. Como o Node.js é assíncrono, você pode fazer vários INSERT ou SELECT de "forma paralela" mas sem ser paralela.
+O Node.js será o **interpretador** (e não compilador) do seu JS no backend, isto é, fora do navegador e suportará o funcionamento da rede (Internet) para você chegar até o seu banco de dados. Como o Node.js é assíncrono, você pode fazer vários INSERT ou SELECT de "forma paralela" mas sem ser paralela.
 
 E o Sails? É um framework web MVC (Model-View-Controller) para Node.js, projetado para facilitar o desenvolvimento de aplicativos web modernos e escaláveis.
 
