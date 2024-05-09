@@ -370,19 +370,7 @@ module.exports = {
 
 Esse arquivo serve para configurar as rotas. 
 
-Por exemplo, se você digitar no seu navegador **http://localhost:1337/** ele vai mandar carregar alguma homepage com a simples **/**.
-
-```
-'/': { view: 'pages/homepage' },
-```
-
-Outro exemplo: se digitar  **http://localhost:1337/heroe**, o routes ficaria assim:
-
-```
-'/minhaPagina': { view: 'pages/mypage' },
-```
-
-Portanto, copie e cole esse código para o seu routes.js
+Copie e cole esse código para o seu routes.js e entenda o que está acontendo logo depois.
 
 ```
 /**
@@ -414,6 +402,18 @@ O que está acontecendo no routes?
 * A tarefa POST (que é o mesmo que CREATE) será direcionado para HeroesController.create
 * A tarefa GET geral (que é o mesmo que SELECT *) será direcionado para HeroesController.getAll
 * A tarefa GET via ID ( que é o mesmo que SELECT WHERE) será direcionado para HeroesController.getById
+* Por exemplo, se você digitar no seu navegador **http://localhost:1337/** ele vai mandar carregar alguma homepage com a simples **/**.
+
+```
+'/': { view: 'pages/homepage' },
+```
+
+Outro exemplo: se digitar  **http://localhost:1337/mypage**, o routes ficaria assim:
+
+```
+'/mypage': { view: 'pages/mypage' },
+```
+
 
 #### Boas práticas:
 
