@@ -266,7 +266,12 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-  migrate: 'alter',
+  migrate: 'alter', 
+  //quando você escolhe a opção DEV na etapa 5, aqui fica 'alter' 
+  //mas se você escolher TESTS, ele fica como 'drop'
+  //o correto é deixar 'alter' enquanto vc está desenvolvendo porque
+  //assim ele não vai apagar tudo todas as vezes que vc der um sails lift
+  //ou mandar preenher o seu formlário de entrada que está no model
 
 
   /***************************************************************************
